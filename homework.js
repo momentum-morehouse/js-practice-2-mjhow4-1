@@ -2,21 +2,54 @@
 // member of the array, and returns a new array with that member removed.
 // For example, `remove(['Cadence', 'Ordel', 'Marion'], 'Marion')` results
 // in `['Cadence', 'Ordel']`.
-//
+
 // If the potential member is not in the array, return the array unchanged.
 // If the potential member is in the array, remove all instances of it from the array.
-
+function remove(array, member) {
+    let array2 = array.slice(0);
+   for (var i = array2.length; i--; ) {
+     if (array2[i] === member) {
+       array2.splice(i, 1)
+     }
+   } return array2
+}
 // 2. Revisit your "remove" function. Make sure that it does not change the original
 // array but instead returns a new array.
+    //see above -- same function satisfies questions one and two.
 
-// 3. Create a function called "sum" that takes an array of numbers and
-// returns the sum of those numbers.
+// 3. Create a function called "sum" that takes an array of numbers and returns the sum of those numbers.
+function sum(n) {
+    var array5 = n
+  for (var i = 0, sum = 0; i < array5.length; sum += array5[i++]);
+    return sum;
+  }
 
-// 4. Create a function called "average" that takes an array of numbers
-// and returns the average of those numbers.
+// 4. Create a function called "average" that takes an array of numbers and returns the average of those numbers.
+function average(n) {
+    var array5 = n
+  for (var i = 0, sum = 0; i < array5.length; sum += array5[i++]);
+    if (sum == 0) {
+    return undefined; 
+    } else if (sum != 0) {
+        return sum / n.length;
+      }
+  }
 
 // 5. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
+function minimum(x) {
+    var array5 = x
+    let y = Math.min.apply(null, array5);
+    if (x.length == 0) {
+      return undefined
+    } else if (x.length == 1){
+        return x;
+    } else {
+        return y;
+    }
+}
+
+
 
 // 6. There are many techniques to sort arrays in programming. Your programming
 // language will likely include the ability to do this. We are going to
