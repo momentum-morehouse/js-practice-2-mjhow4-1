@@ -75,25 +75,8 @@ function minimum(x) {
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
 
-function selectionSort(x) { 
     
-    let n = x.length;
-    let x2 = x.slice(0);    
-    for(let i = 0; i < n; i++) {
-        let min = i;
-        for(let j = 0; j < n; j++){
-            if(x2[j] < x2[min]) {
-                min=j; 
-            }
-         }
-         if (min != i) {
-             let tmp = x2[i]; 
-             x2[i] = x2[min];
-             x2[min] = tmp;      
-        }
-    }
-    return x2;
-}
+
 
 
 // 7. Create a function called `textList` that takes an array and joins its elements
