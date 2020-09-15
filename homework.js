@@ -75,7 +75,35 @@ function minimum(x) {
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
 
+/*function selectionSort(numArray) { 
+    //let n = numArray.length;
+    let copyArray = numArray; 
+    let sortedArray = [];
+    let i =0;
+    let smallestNum = Infinity; 
+    while (i < copyArray.length) { 
+        if (numArray.length === 1) {
+            return numArray;
+        } else {
+            if(copyArray[i] < smallestNum) {
+                smallestNum = copyArray[i];
+                //copyArray = remove(copyArray, smallestNum);
+                sortedArray.unshift(smallestNum); 
+            } else {
+                sortedArray.push(copyArray[i]);
+            }
+            i++
+        
+    }
+}
     
+    return sortedArray;  
+}*/
+
+    function selectionSort (numArray) {
+       return numArray.sort((a, b) => a - b);  
+    }
+
 
 
 
@@ -84,3 +112,7 @@ function minimum(x) {
 //
 // For example, `textList(['Cadence', 'Ordel', 'Marion'])` results in the string
 // `"Cadence,Ordel,Marion"`.
+
+        function textList(array) {
+            return array.join(",");
+        }
